@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact Search Agent</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #032d60, #0070d2);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .hero h1 { font-size: 48px; font-weight: 800; margin-bottom: 16px; }
+        .hero p  { font-size: 20px; opacity: 0.85; margin-bottom: 30px; }
+        .examples {
+            background: rgba(255,255,255,0.15);
+            border-radius: 16px;
+            padding: 24px 32px;
+            backdrop-filter: blur(10px);
+        }
+        .examples strong { display: block; margin-bottom: 12px; font-size: 16px; }
+        .example {
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            padding: 10px 16px;
+            margin: 8px 0;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>🔍 Contact Finder</h1>
+        <p>Powered by Salesforce Agentforce</p>
+        <div class="examples">
+            <strong>💬 Try asking:</strong>
+            <div class="example">"Search for Rahul"</div>
+            <div class="example">"Find contacts named Sharma"</div>
+            <div class="example">"Look up John"</div>
+        </div>
+    </div>
+
+    <!-- SALESFORCE EMBED CODE START -->
+    <!-- PASTE YOUR COPIED SNIPPET HERE -->
+  <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DdM00000tCg0b',
+				'ContactAgentChannel',
+				'https://orgfarm-64dd45bd95-dev-ed.develop.my.site.com/ESWContactAgentChannel1777627404748',
+				{
+					scrt2URL: 'https://orgfarm-64dd45bd95-dev-ed.develop.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://orgfarm-64dd45bd95-dev-ed.develop.my.site.com/ESWContactAgentChannel1777627404748/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+    <!-- SALESFORCE EMBED CODE END -->
+
+</body>
+</html>
