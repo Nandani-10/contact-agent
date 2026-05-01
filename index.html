@@ -15,10 +15,7 @@
             justify-content: center;
             color: white;
         }
-        .hero {
-            text-align: center;
-            padding: 40px 20px;
-        }
+        .hero { text-align: center; padding: 40px 20px; }
         .hero h1 { font-size: 48px; font-weight: 800; margin-bottom: 16px; }
         .hero p  { font-size: 20px; opacity: 0.85; margin-bottom: 30px; }
         .examples {
@@ -49,35 +46,38 @@
         </div>
     </div>
 
-    <!-- SALESFORCE EMBED CODE START -->
-    <!-- PASTE YOUR COPIED SNIPPET HERE -->
-  <script type='text/javascript'>
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+    <!-- HIDDEN PRE-CHAT VARIABLES -->
+    <script type='text/javascript'>
+        window.addEventListener('onEmbeddedMessagingReady', () => {
+            embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+                "PageSource": "GitHub External Site",
+                "VisitorType": "External User"
+            });
+        });
+    </script>
 
-			embeddedservice_bootstrap.init(
-				'00DdM00000tCg0b',
-				'ContactAgentChannel',
-				'https://orgfarm-64dd45bd95-dev-ed.develop.my.site.com/ESWContactAgentChannel1777627404748',
-				{
-					scrt2URL: 'https://orgfarm-64dd45bd95-dev-ed.develop.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-	};
-</script>
-<script type='text/javascript' src='https://orgfarm-64dd45bd95-dev-ed.develop.my.site.com/ESWContactAgentChannel1777627404748/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-
-    <!-- SALESFORCE EMBED CODE END -->
-window.addEventListener('onEmbeddedMessagingReady', () => {
-    embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
-        "PageSource": "GitHub External Site",
-        "VisitorType": "External User"
-    });
-});
+    <!-- SALESFORCE EMBED CODE -->
+    <script type='text/javascript'>
+        function initEmbeddedMessaging() {
+            try {
+                embeddedservice_bootstrap.settings.language = 'en_US';
+                embeddedservice_bootstrap.init(
+                    '00DdM00000tCg0b',
+                    'ContactAgentChannel',
+                    'https://orgfarm-64dd45bd95-dev-ed.develop.my.site.com/ESWContactAgentChannel1777627404748',
+                    {
+                        scrt2URL: 'https://orgfarm-64dd45bd95-dev-ed.develop.my.salesforce-scrt.com'
+                    }
+                );
+            } catch (err) {
+                console.error('Error loading Embedded Messaging: ', err);
+            }
+        };
+    </script>
+    <script type='text/javascript'
+        src='https://orgfarm-64dd45bd95-dev-ed.develop.my.site.com/ESWContactAgentChannel1777627404748/assets/js/bootstrap.min.js'
+        onload='initEmbeddedMessaging()'>
+    </script>
 
 </body>
 </html>
