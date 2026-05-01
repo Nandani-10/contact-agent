@@ -72,6 +72,12 @@
 <script type='text/javascript' src='https://orgfarm-64dd45bd95-dev-ed.develop.my.site.com/ESWContactAgentChannel1777627404748/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
     <!-- SALESFORCE EMBED CODE END -->
+window.addEventListener('onEmbeddedMessagingReady', () => {
+    embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+        "PageSource": "GitHub External Site",
+        "VisitorType": "External User"
+    });
+});
 
 </body>
 </html>
